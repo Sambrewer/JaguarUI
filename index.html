@@ -9,10 +9,26 @@
     <title>Jaguar AI</title>
   </head>
   <body>
+    <section id="slide-out-nav">
+      <div class="slide-out-nav-wrapper">
+        <div class="user-info">
+          <img src="./images/profilepic.jpg" alt="Profile Picture"/>
+          <h2>Chuck Bartowski</h2>
+          <p>cbartowskispy@gmail.com</p>
+        </div>
+        <div class="slide-out-buttons">
+          <div><i class="fa fa-home"></i><p>Home</p></div>
+          <div><i class="fa fa-star-o"></i><p>Favorite Products</p></div>
+          <div><i class="fa fa-floppy-o"></i><p>Saved Searches</p></div>
+          <div><i class="fa fa-cog"></i><p>Settings</p></div>
+          <div class="slide-out-footer"><i class="fa fa-sign-out"></i><p>Sign Out</p></div>
+        </div>
+      </div>
+    </section>
     <section>
       <nav>
         <div>
-          <button><i class="fa fa-bars"></i></button>
+          <button><i class="fa fa-bars" id="nav-button"></i></button>
           <h3>JUGUARAI</h3>
         </div>
         <div>
@@ -326,5 +342,6 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

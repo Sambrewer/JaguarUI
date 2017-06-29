@@ -2,6 +2,7 @@
 body {
   font-family: 'Varela Round', sans-serif;
   background: #d3d3d3;
+  overflow-x: hidden;
 }
 nav {
   display: flex;
@@ -24,6 +25,62 @@ nav div button {
 }
 nav div button:focus {
   outline: none;
+}
+#slide-out-nav {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.slide-out-nav-wrapper {
+  height: 100%;
+  width: 250px;
+  z-index: 10;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: dodgerblue;
+  width: 250px;
+  height: 45%;
+  color: white;
+}
+.user-info img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 10px;
+}
+.user-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.slide-out-buttons {
+  width: 250px;
+  height: 60%;
+  background: white;
+}
+.slide-out-buttons div {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+  font-size: 18px;
+}
+.slide-out-buttons div i {
+  color: #aaa;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.slide-out-footer {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #ddd;
 }
 .page-info {
   display: flex;
