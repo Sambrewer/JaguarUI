@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+body {
+  font-family: 'Varela Round', sans-serif;
+  background: #d3d3d3;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background: dodgerblue;
+  padding: 5px;
+  font-size: 18px;
+}
+nav div {
+  display: flex;
+  color: white;
+  font-weight: bold;
+}
+nav div button {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+nav div button:focus {
+  outline: none;
+}
+.page-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: white;
+}
+.page-info p {
+  color: #666;
+  font-size: 14px;
+}
+.page-info a {
+  color: dodgerblue;
+  font-weight: bold;
+}
+.categories-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.category-card {
+  background: white;
+  margin: auto;
+  width: 300px;
+  padding: 5px;
+  border: .5px solid #bbb;
+  border-radius: 1.5px;
+  margin-bottom: 10px;
+}
+.quick-view {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quick-view a {
+  color: dodgerblue;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.quick-view img {
+  width: 60%;
+  height: 125px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.quick-view p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.quick-view p span {
+  font-size: 18px;
+}
+.quick-view p i {
+  color: #aaa;
+}
+.categories-data {
+  display: flex;
+  border-top: .5px solid #bbb;
+  margin: 15px;
+}
+
+.categories-data div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+  align-items: center;
+  width: 100%;
+}
+.categories-data-card-1 {
+  border-right: .5px solid #bbb;
+}
+.catagories-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.catagories-info p {
+  font-size: 12px;
+}
