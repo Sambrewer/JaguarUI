@@ -9,6 +9,7 @@ $(document).ready((e) => {
 
   $('#search-button').click(() => {
     $('#search-screen').show()
+    $('.categories-wrapper').hide()
   });
 
   $('#slide-out-nav').on('click', () => {
@@ -22,5 +23,14 @@ $(document).ready((e) => {
 
   $('#search-close').click(() => {
     $('#search-screen').hide()
+    $('.categories-wrapper').show()
   });
+
+  $('#result-limit').change(() => {
+    $('#range-limit-value').text($('#result-limit').val())
+  })
+
+  $('#min-volume').change(() => {
+    $('#range-volume-value').text($('#min-volume').val())
+  })
 })

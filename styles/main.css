@@ -117,7 +117,7 @@ nav div button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 40px;
   background: dodgerblue;
   padding: 5px;
   font-size: 18px;
@@ -129,7 +129,6 @@ nav div button:focus {
   font-size: 20px;
 }
 .search-params {
-  height: 90%;
   background: white;
 }
 .search-input {
@@ -146,7 +145,7 @@ nav div button:focus {
   font-size: 18px;
   margin-bottom: 10px;
 }
-#range-value {
+.range-value {
   color: dodgerblue;
 }
 .search-range-slider {
@@ -160,21 +159,18 @@ nav div button:focus {
 }
 .search-range-slider::-webkit-slider-runnable-track {
   width: 100%;
-  height: 5px;
+  height: 2.5px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
   background: #2497E3;
-  border-radius: 1px;
+  border-radius: 3px;
   border: 0px solid #000000;
 }
 .search-range-slider::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 1px solid #2497E3;
   height: 18px;
   width: 18px;
   border-radius: 25px;
-  background: #A1D0FF;
+  background: #2497E3;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7px;
@@ -182,62 +178,58 @@ nav div button:focus {
 .search-range-slider:focus::-webkit-slider-runnable-track {
   background: #2497E3;
 }
-.search-range-slider::-moz-range-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 0px 0px 0px #000000;
-  background: #2497E3;
-  border-radius: 1px;
-  border: 0px solid #000000;
+.search-input-1 {
+  padding: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
 }
-.search-range-slider::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 1px solid #2497E3;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
-  background: #A1D0FF;
-  cursor: pointer;
+.search-input-1 h2 {
+  margin-bottom: 10px;
 }
-.search-range-slider::-ms-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+.search-input-1 div {
+  display: flex;
 }
-.search-range-slider::-ms-fill-lower {
-  background: #2497E3;
-  border: 0px solid #000000;
-  border-radius: 2px;
-  box-shadow: 0px 0px 0px #000000;
-}
-.search-range-slider::-ms-fill-upper {
+.search-input-1 div input {
+  width: 50%;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
   background: #ddd;
-  border: 0px solid #000000;
-  border-radius: 2px;
-  box-shadow: 0px 0px 0px #000000;
+  padding: 5px;
 }
-.search-range-slider::-ms-thumb {
-  margin-top: 1px;
-  box-shadow: 0px 0px 0px #000000;
-  border: 1px solid #2497E3;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
-  background: #A1D0FF;
-  cursor: pointer;
+.search-input-2 {
+  padding: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
 }
-.search-range-slider:focus::-ms-fill-lower {
-  background: #2497E3;
+.search-input-2 h2 {
+  margin-bottom: 10px;
 }
-.search-range-slider:focus::-ms-fill-upper {
+.search-input-2 select {
+  height: 35px;
+  width: 100%;
+  font-size: 14px;
+  border: none;
   background: #ddd;
+  padding: 5px;
 }
+.save-search {
+  font-size: 18px;
+  color: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.save-search button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: dodgerblue;
+}
+
 /* Home Page Content */
 
 .categories-wrapper {

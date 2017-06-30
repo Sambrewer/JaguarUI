@@ -33,29 +33,61 @@
       <div class="search-params">
         <div class="search-input">
           <div>
-            <label for="result-limit">Limit</label>
-            <span id="range-value">500</span>
+            <h2 for="result-limit">Limit</h2>
+            <h2 id="range-limit-value" class="range-value">500</h2>
           </div>
           <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
         </div>
         <div class="search-input">
           <div>
             <h2>Min Volume</h2>
-            <h2 id="range-value">1</h2>
+            <h2 id="range-volume-value" class="range-value">500</h2>
           </div>
           <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
         </div>
-        <div class="search-input">
-
+        <div class="search-input-1">
+          <h2>Price</h2>
+          <div>
+            <input type="text" class="search-text" placeholder="Min">
+            <input type="text" class="search-text" placeholder="Max">
+          </div>
         </div>
-        <div class="search-input">
-
+        <div class="search-input-1">
+          <h2>Reviews</h2>
+          <div>
+            <input type="text" class="search-text" placeholder="Min">
+            <input type="text" class="search-text" placeholder="Max">
+          </div>
         </div>
-        <div class="search-input">
-
+        <div class="search-input-2">
+          <h2>Sort By</h2>
+          <select class="search-select">
+            <option selected>Average Revenue</option>
+            <option># Products</option>
+            <option>1st Page Space</option>
+            <option>Average Price</option>
+            <option>Average Review Count</option>
+            <option>Average Volume</option>
+            <option>Max Revenue</option>
+          </select>
         </div>
-        <div class="search-input">
-
+        <div class="search-input-2">
+          <h2>Keywords</h2>
+          <select class="search-select">
+            <option disabled selected>e.g. cooktops or electronics</option>
+            <option>Camping & Outdoors</option>
+            <option>Cleaning Supplies</option>
+            <option>Cooktops</option>
+            <option>Electronics</option>
+            <option>More Options</option>
+            <option>More Options</option>
+            <option>More Options</option>
+            <option>More Options</option>
+          </select>
+        </div>
+        <div class="save-search">
+          <button>Save Search</button>
+          <p>Results (134)</p>
         </div>
       </div>
     </section>
