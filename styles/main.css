@@ -4,7 +4,13 @@ body {
   background: #d3d3d3;
   overflow-x: hidden;
 }
-
+button {
+  border: none;
+  background: none;
+}
+button:focus {
+  outline: none;
+}
 /* Main Nav bar */
 
 nav {
@@ -22,12 +28,7 @@ nav div {
   font-weight: bold;
 }
 nav div button {
-  border: none;
-  background: rgba(0, 0, 0, 0);
   color: white;
-}
-nav div button:focus {
-  outline: none;
 }
 .page-info {
   display: flex;
@@ -42,7 +43,7 @@ nav div button:focus {
   color: #666;
   font-size: 14px;
 }
-.page-info a {
+.page-info button {
   color: dodgerblue;
   font-weight: bold;
 }
@@ -108,10 +109,17 @@ nav div button:focus {
 
 /*Search Screen */
 
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+}
 #search-screen {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 320px;
 }
 #search-screen header {
   display: flex;
@@ -123,8 +131,6 @@ nav div button:focus {
   font-size: 18px;
 }
 #search-screen header button {
-  border: none;
-  background: none;
   color: white;
   font-size: 20px;
 }
@@ -216,6 +222,7 @@ nav div button:focus {
 }
 .save-search {
   font-size: 18px;
+  font-weight: bold;
   color: dodgerblue;
   display: flex;
   justify-content: space-between;
@@ -224,9 +231,57 @@ nav div button:focus {
   border-bottom: 1px solid #ddd;
 }
 .save-search button {
-  border: none;
-  background: none;
   font-size: 18px;
+  font-weight: bold;
+  color: dodgerblue;
+}
+.save-search-modal-wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+}
+.save-search-modal {
+  height: 150px;
+  width: 250px;
+  font-size: 20px;
+  background: white;
+  margin: auto;
+  margin-top: 35px;
+  border-radius: 3px;
+  border: .5px solid #bbb;
+  position: relative;
+  padding: 20px;
+}
+.save-search-modal input {
+  margin: 20px;
+  height: 30px;
+  border: none;
+  background: #ddd;
+  width: 200px;
+  padding: 5px;
+}
+.save-search-buttons {
+  width: 250px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+.save-search-buttons button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+}
+#save-button {
   color: dodgerblue;
 }
 
@@ -297,4 +352,58 @@ nav div button:focus {
 }
 .catagories-info p {
   font-size: 12px;
+}
+
+/* Sort Modal */
+
+.sort-wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+.sort-modal {
+  width: 250px;
+  background: white;
+  height: 375px;
+  padding: 15px;
+  position: relative;
+  border-radius: 3px;
+  border: .5 solid #ddd;
+  margin-top: 25px;
+}
+.sort-modal h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.sort-modal button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.sort-buttons {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  border-top: 1px solid #ddd
+}
+.sort-buttons button {
+  font-size: 14px;
+  font-weight: bold;
+}
+#sort-cancel {
+  color: #666;
+}
+#sort-done {
+  color: dodgerblue;
 }

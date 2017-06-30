@@ -9,6 +9,9 @@
     <title>Jaguar AI</title>
   </head>
   <body>
+
+    <!-- Side Menu -->
+
     <section id="slide-out-nav">
       <div class="slide-out-nav-wrapper">
         <div class="user-info">
@@ -25,72 +28,89 @@
         </div>
       </div>
     </section>
-    <section id="search-screen">
-      <header>
-        <button id="search-close"><i class="fa fa-times"></i></button>
-        <button id="search-reset">Reset All</button>
-      </header>
-      <div class="search-params">
-        <div class="search-input">
-          <div>
-            <h2 for="result-limit">Limit</h2>
-            <h2 id="range-limit-value" class="range-value">500</h2>
+
+    <!-- Search Screen -->
+
+    <section class="search-wrapper">
+      <div id="search-screen">
+        <header>
+          <button id="search-close"><i class="fa fa-times"></i></button>
+          <button id="search-reset">Reset All</button>
+        </header>
+        <div class="search-params">
+          <div class="search-input">
+            <div>
+              <h2 for="result-limit">Limit</h2>
+              <h2 id="range-limit-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
           </div>
-          <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
-        </div>
-        <div class="search-input">
-          <div>
-            <h2>Min Volume</h2>
-            <h2 id="range-volume-value" class="range-value">500</h2>
+          <div class="search-input">
+            <div>
+              <h2>Min Volume</h2>
+              <h2 id="range-volume-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
           </div>
-          <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
-        </div>
-        <div class="search-input-1">
-          <h2>Price</h2>
-          <div>
-            <input type="text" class="search-text" placeholder="Min">
-            <input type="text" class="search-text" placeholder="Max">
+          <div class="search-input-1">
+            <h2>Price</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-1">
+            <h2>Reviews</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-2">
+            <h2>Sort By</h2>
+            <select class="search-select">
+              <option selected>Average Revenue</option>
+              <option># Products</option>
+              <option>1st Page Space</option>
+              <option>Average Price</option>
+              <option>Average Review Count</option>
+              <option>Average Volume</option>
+              <option>Max Revenue</option>
+            </select>
+          </div>
+          <div class="search-input-2">
+            <h2>Keywords</h2>
+            <select class="search-select">
+              <option disabled selected>e.g. cooktops or electronics</option>
+              <option>Camping & Outdoors</option>
+              <option>Cleaning Supplies</option>
+              <option>Cooktops</option>
+              <option>Electronics</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+            </select>
+          </div>
+          <div class="save-search">
+            <button>Save Search</button>
+            <p>Results (134)</p>
           </div>
         </div>
-        <div class="search-input-1">
-          <h2>Reviews</h2>
-          <div>
-            <input type="text" class="search-text" placeholder="Min">
-            <input type="text" class="search-text" placeholder="Max">
+        <div class="save-search-modal-wrapper">
+          <div class="save-search-modal" id="save-search-modal">
+            <h1>Save Search</h1>
+            <input type="text" placeholder="Name Your Search">
+            <div class="save-search-buttons">
+              <button id="cancel-save">Cancel</button>
+              <button id="save-button">Save</button>
+            </div>
           </div>
-        </div>
-        <div class="search-input-2">
-          <h2>Sort By</h2>
-          <select class="search-select">
-            <option selected>Average Revenue</option>
-            <option># Products</option>
-            <option>1st Page Space</option>
-            <option>Average Price</option>
-            <option>Average Review Count</option>
-            <option>Average Volume</option>
-            <option>Max Revenue</option>
-          </select>
-        </div>
-        <div class="search-input-2">
-          <h2>Keywords</h2>
-          <select class="search-select">
-            <option disabled selected>e.g. cooktops or electronics</option>
-            <option>Camping & Outdoors</option>
-            <option>Cleaning Supplies</option>
-            <option>Cooktops</option>
-            <option>Electronics</option>
-            <option>More Options</option>
-            <option>More Options</option>
-            <option>More Options</option>
-            <option>More Options</option>
-          </select>
-        </div>
-        <div class="save-search">
-          <button>Save Search</button>
-          <p>Results (134)</p>
         </div>
       </div>
     </section>
+    <!-- Main Nav -->
+
     <section>
       <nav>
         <div>
@@ -103,9 +123,35 @@
       </nav>
       <div class="page-info">
         <p>8,523 Categories</p>
-        <h4><a>SORT</a></h4>
+        <button id="sort-show">SORT</button>
       </div>
     </section>
+
+    <!-- Sort Modal -->
+
+    <section>
+      <div class="sort-wrapper">
+        <div class="sort-modal">
+          <h2>Sort By</h2>
+          <div class="sort-options">
+            <div><button id="avg-revenue">Average Revenue</button></div>
+            <div><button id="num-products"># Products</button></div>
+            <div><button id="avg-price">Average Price</button></div>
+            <div><button id="avg-volume">Average Volume</button></div>
+            <div><button id="page-space">1st Page Space</button></div>
+            <div><button id="avg-review">Average Review Count</button></div>
+            <div><button id="max-revenue">Max Revenue</button></div>
+          </div>
+          <div class="sort-buttons">
+            <button id="sort-cancel">Cancel</button>
+            <button id="sort-done">Done</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home view -->
+
     <section class="categories-wrapper">
       <div class="category-card">
         <div class="quick-view">
