@@ -11,6 +11,10 @@ button {
 button:focus {
   outline: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* Main Nav bar */
 
 nav {
@@ -24,10 +28,15 @@ nav {
 }
 nav div {
   display: flex;
+}
+nav h3 {
   color: white;
   font-weight: bold;
 }
 nav div button {
+  color: white;
+}
+nav a {
   color: white;
 }
 .page-info {
@@ -353,6 +362,9 @@ nav div button {
 .catagories-info p {
   font-size: 12px;
 }
+.catagories-info i {
+  color: #aaa;
+}
 
 /* Sort Modal */
 
@@ -395,7 +407,7 @@ nav div button {
   width: 250px;
   height: 40px;
   padding: 5px;
-  border-top: 1px solid #ddd
+  border-top: 1px solid #ddd;
 }
 .sort-buttons button {
   font-size: 14px;
@@ -406,4 +418,55 @@ nav div button {
 }
 #sort-done {
   color: dodgerblue;
+}
+
+/* Saved Searches */
+
+.saved-search-card {
+  width: 300px;
+  height: 300px;
+  background: white;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.saved-search-head {
+  margin: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.saved-search-head h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.saved-search-head p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.saved-search-data div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7.5px;
+}
+
+.saved-search-data div p:nth-child(1) {
+  color: #666
+}
+.saved-search-footer {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  border-top: .5px solid #ddd;
+}
+.saved-search-footer button {
+  font-size: 18px;
+  color: dodgerblue;
+  border: .5px solid #ddd;
+  border-radius: 3px;
+  height: 30px;
 }
