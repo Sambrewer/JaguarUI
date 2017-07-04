@@ -24,7 +24,6 @@ $(document).ready((e) => {
 
   $('#search-button').click(() => {
     $('.search-wrapper').show()
-    $('.categories-wrapper').hide()
   });
 
   $('.save-search button').click(() => {
@@ -73,7 +72,6 @@ $(document).ready((e) => {
       $('#avg-revenue').css('color', 'black')
     }
     console.log($('#avg-revenue').parent().children().length);
-    // if ($('#avg-revenue').parent())
   })
 
   $('#num-products').click(() => {
@@ -166,5 +164,11 @@ $(document).ready((e) => {
   $('#sort-done').click(() => {
     $('.sort-wrapper').hide()
     $('body').css('overflow-y', 'auto')
+  })
+
+  //Results Page
+
+  $('#results-fave').click(() => {
+    console.log(this);
   })
 })

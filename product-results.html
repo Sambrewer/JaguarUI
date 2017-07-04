@@ -1,1 +1,239 @@
-<h1>You did it!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Search Results</title>
+  </head>
+  <body>
+
+    <section class="search-wrapper">
+      <div id="search-screen">
+        <header>
+          <button id="search-close"><i class="fa fa-times"></i></button>
+          <button id="search-reset">Reset All</button>
+        </header>
+        <div class="search-params">
+          <div class="search-input">
+            <div>
+              <h2 for="result-limit">Limit</h2>
+              <h2 id="range-limit-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
+          </div>
+          <div class="search-input">
+            <div>
+              <h2>Min Volume</h2>
+              <h2 id="range-volume-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
+          </div>
+          <div class="search-input-1">
+            <h2>Price</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-1">
+            <h2>Reviews</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-2">
+            <h2>Sort By</h2>
+            <select class="search-select">
+              <option selected>Average Revenue</option>
+              <option># Products</option>
+              <option>1st Page Space</option>
+              <option>Average Price</option>
+              <option>Average Review Count</option>
+              <option>Average Volume</option>
+              <option>Max Revenue</option>
+            </select>
+          </div>
+          <div class="search-input-2">
+            <h2>Keywords</h2>
+            <select class="search-select">
+              <option disabled selected>e.g. cooktops or electronics</option>
+              <option>Camping & Outdoors</option>
+              <option>Cleaning Supplies</option>
+              <option>Cooktops</option>
+              <option>Electronics</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+            </select>
+          </div>
+          <div class="save-search">
+            <button>Save Search</button>
+            <p>Results (134)</p>
+          </div>
+        </div>
+        <div class="save-search-modal-wrapper">
+          <div class="save-search-modal" id="save-search-modal">
+            <h1>Save Search</h1>
+            <input type="text" placeholder="Name Your Search">
+            <div class="save-search-buttons">
+              <button id="cancel-save">Cancel</button>
+              <button id="save-button">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <nav>
+        <div>
+          <a id="nav-button" href="./index.html"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <h3>Product Results</h3>
+        <div>
+          <button id='search-button'><i class="fa fa-search"></i></button>
+        </div>
+      </nav>
+      <div class="page-info">
+        <p>1,298 Results</p>
+        <button id="sort-show">SORT</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="sort-wrapper">
+        <div class="sort-modal">
+          <h2>Sort By</h2>
+          <div class="sort-options">
+            <div><button id="avg-revenue">Average Revenue</button></div>
+            <div><button id="num-products"># Products</button></div>
+            <div><button id="avg-price">Average Price</button></div>
+            <div><button id="avg-volume">Average Volume</button></div>
+            <div><button id="page-space">1st Page Space</button></div>
+            <div><button id="avg-review">Average Review Count</button></div>
+            <div><button id="max-revenue">Max Revenue</button></div>
+          </div>
+          <div class="sort-buttons">
+            <button id="sort-cancel">Cancel</button>
+            <button id="sort-done">Done</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-wrapper">
+      <div class="results-info">
+        <div class="category-view">
+          <h2>Steam Espresso Machines</h2>
+          <h2>(209835220)</h2>
+          <img src="./images/stmespmach.jpg" alt="Catagory Example">
+        </div>
+        <div class="category-info">
+          <div>
+            <h3>Sales Trend</h3>
+            <h4>May 2017</h4>
+          </div>
+          <img src="./images/graph.png" alt="Sales Trend Graph">
+      </div>
+    </div>
+    <div class="fave-card">
+      <div class="fave-head">
+        <div>
+          <p>Rubbermaid Professional Plus Commercial Wringer Mop Bucket, 2...</p>
+          <p>by Rubbermaid</p>
+        </div>
+        <button id="results-fave"><i class="fa fa-star"></i></button>
+      </div>
+      <div class="fave-quickview">
+        <img src="./images/mopbucket.jpg" alt="Product Image">
+        <div>
+          <h2>$22,236.72</h2>
+          <p>Monthly Revenue <i class="fa fa-info-circle"></i></p>
+        </div>
+      </div>
+      <div class="fave-info">
+        <div>
+          <h4>6</h4>
+          <h5>Volume</h5>
+        </div>
+        <div>
+          <h4>4.2 <i class="fa fa-star"></i></h4>
+          <h5>Review Average</h5>
+        </div>
+        <div>
+          <h4>57</h4>
+          <h5>Review Count</h5>
+        </div>
+      </div>
+      <div class="fave-revenue">
+        <div>
+          <h3>$288.00 -</h3>
+          <h4>Price</h4>
+        </div>
+        <div>
+          <h3>$68.11 =</h3>
+          <h4>Fees</h4>
+        </div>
+        <div>
+          <h2>&nbsp;$219.89</h2>
+          <h4>Surplus</h4>
+        </div>
+      </div>
+    </div>
+    <div class="fave-card">
+      <div class="fave-head">
+        <div>
+          <p>Rubbermaid Professional Plus Commercial Wringer Mop Bucket, 2...</p>
+          <p>by Rubbermaid</p>
+        </div>
+        <button id="results-fave"><i class="fa fa-star"></i></button>
+      </div>
+      <div class="fave-quickview">
+        <img src="./images/mopbucket.jpg" alt="Product Image">
+        <div>
+          <h2>$22,236.72</h2>
+          <p>Monthly Revenue <i class="fa fa-info-circle"></i></p>
+        </div>
+      </div>
+      <div class="fave-info">
+        <div>
+          <h4>6</h4>
+          <h5>Volume</h5>
+        </div>
+        <div>
+          <h4>4.2 <i class="fa fa-star"></i></h4>
+          <h5>Review Average</h5>
+        </div>
+        <div>
+          <h4>57</h4>
+          <h5>Review Count</h5>
+        </div>
+      </div>
+      <div class="fave-revenue">
+        <div>
+          <h3>$288.00 -</h3>
+          <h4>Price</h4>
+        </div>
+        <div>
+          <h3>$68.11 =</h3>
+          <h4>Fees</h4>
+        </div>
+        <div>
+          <h2>&nbsp;$219.89</h2>
+          <h4>Surplus</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

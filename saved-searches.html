@@ -6,9 +6,88 @@
     <link rel="stylesheet" href="./styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Jaguar AI</title>
+    <title>Saved Searches</title>
   </head>
   <body>
+
+    <section class="search-wrapper">
+      <div id="search-screen">
+        <header>
+          <button id="search-close"><i class="fa fa-times"></i></button>
+          <button id="search-reset">Reset All</button>
+        </header>
+        <div class="search-params">
+          <div class="search-input">
+            <div>
+              <h2 for="result-limit">Limit</h2>
+              <h2 id="range-limit-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
+          </div>
+          <div class="search-input">
+            <div>
+              <h2>Min Volume</h2>
+              <h2 id="range-volume-value" class="range-value">500</h2>
+            </div>
+            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
+          </div>
+          <div class="search-input-1">
+            <h2>Price</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-1">
+            <h2>Reviews</h2>
+            <div>
+              <input type="text" class="search-text" placeholder="Min">
+              <input type="text" class="search-text" placeholder="Max">
+            </div>
+          </div>
+          <div class="search-input-2">
+            <h2>Sort By</h2>
+            <select class="search-select">
+              <option selected>Average Revenue</option>
+              <option># Products</option>
+              <option>1st Page Space</option>
+              <option>Average Price</option>
+              <option>Average Review Count</option>
+              <option>Average Volume</option>
+              <option>Max Revenue</option>
+            </select>
+          </div>
+          <div class="search-input-2">
+            <h2>Keywords</h2>
+            <select class="search-select">
+              <option disabled selected>e.g. cooktops or electronics</option>
+              <option>Camping & Outdoors</option>
+              <option>Cleaning Supplies</option>
+              <option>Cooktops</option>
+              <option>Electronics</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+              <option>More Options</option>
+            </select>
+          </div>
+          <div class="save-search">
+            <button>Save Search</button>
+            <p>Results (134)</p>
+          </div>
+        </div>
+        <div class="save-search-modal-wrapper">
+          <div class="save-search-modal" id="save-search-modal">
+            <h1>Save Search</h1>
+            <input type="text" placeholder="Name Your Search">
+            <div class="save-search-buttons">
+              <button id="cancel-save">Cancel</button>
+              <button id="save-button">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section>
       <nav>
@@ -22,7 +101,7 @@
       </nav>
     </section>
 
-    <section>
+    <section class="saved-wrapper">
       <div class="saved-search-card">
         <div class="saved-search-head">
           <h1>Janitorial Supplies</h1>
