@@ -168,7 +168,15 @@ $(document).ready((e) => {
 
   //Results Page
 
-  $('#results-fave').click(() => {
-    console.log(this);
+  var fave = false;
+
+  $('#results-fave').click((e) => {
+    if (!fave){
+      $(e.target).closest('i').css('color', 'gold')
+      fave = !fave
+    } else if (fave) {
+      $(e.target).closest('i').css('color', '#aaa')
+      fave  = !fave
+    }
   })
 })

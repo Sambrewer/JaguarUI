@@ -591,6 +591,9 @@ nav a {
 #results-fave i {
   color: #aaa;
 }
+.gold {
+  color: gold;
+}
 .results-info {
   width: 320px;
   background: white;
