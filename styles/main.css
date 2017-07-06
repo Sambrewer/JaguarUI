@@ -3,6 +3,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   background: #d3d3d3;
   overflow-x: hidden;
+  flex-flow: column wrap;
 }
 button {
   border: none;
@@ -300,14 +301,13 @@ nav a {
 /* Home Page Content */
 
 .categories-wrapper {
+  margin: auto;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 10px;
 }
 .category-card {
   background: white;
-  margin: auto;
+  margin: 5px;
   width: 300px;
   padding: 5px;
   border: .5px solid #bbb;
@@ -369,6 +369,33 @@ nav a {
   color: #aaa;
 }
 
+
+@media (min-width: 320px) and (max-width: 649px) {
+  .categories-wrapper {
+    width: 320px;
+    margin: auto;
+  }
+}
+@media (min-width: 650px) and (max-width: 979px){
+  .categories-wrapper {
+    width: 650px;
+  }
+}
+@media (min-width: 980px) and (max-width: 1309px) {
+  .categories-wrapper {
+    width: 980px;
+  }
+}
+@media (min-width: 1310px) and (max-width: 1639px) {
+  .categories-wrapper {
+    width: 1310px;
+  }
+}
+@media (min-width: 1640px) {
+  .categories-wrapper {
+    width: 1610px;
+  }
+}
 /* Sort Modal */
 
 .sort-wrapper {
@@ -389,6 +416,13 @@ nav a {
   border-radius: 3px;
   border: .5 solid #ddd;
   margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sort-modal form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 .sort-modal h2 {
   font-size: 22px;
