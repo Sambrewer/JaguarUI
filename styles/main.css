@@ -3,7 +3,6 @@ body {
   font-family: 'Varela Round', sans-serif;
   background: #d3d3d3;
   overflow-x: hidden;
-  flex-flow: column wrap;
 }
 button {
   border: none;
@@ -15,6 +14,9 @@ button:focus {
 a {
   text-decoration: none;
   color: inherit;
+}
+section {
+  overflow-x: hidden;
 }
 /* Main Nav bar */
 
@@ -33,13 +35,16 @@ nav div {
 nav h3 {
   color: white;
   font-weight: bold;
+  margin-top: 2.5px;
 }
 nav div button {
+  font-size: 18px;
   color: white;
 }
 nav a {
   color: white;
 }
+
 .page-info {
   display: flex;
   justify-content: space-between;
@@ -133,6 +138,7 @@ nav a {
   position: fixed;
   top: 0;
   width: 320px;
+  height: 715px;
 }
 #search-screen header {
   display: flex;
@@ -297,7 +303,12 @@ nav a {
 #save-button {
   color: dodgerblue;
 }
-
+@media (max-height: 715px) {
+  #search-screen {
+    height: 100vh;
+    overflow: auto;
+  }
+}
 /* Home Page Content */
 
 .categories-wrapper {
@@ -429,12 +440,6 @@ nav a {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.sort-modal button {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
 .sort-buttons {
   position: absolute;
   bottom: 0;
@@ -460,14 +465,15 @@ nav a {
 /* Favorite Products */
 .fave-wrapper {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  margin: auto;
 }
 .fave-card {
   width: 300px;
   background: white;
   border-bottom: 1px solid #ddd;
   padding: 10px;
+  margin: 5px;
   margin-bottom: 10px;
 }
 .fave-head {
@@ -486,7 +492,7 @@ nav a {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.fave-head i {
+.fave-prod-star {
   color: #DFB026;
   font-size: 24px;
   margin-top: 10px;
@@ -555,13 +561,37 @@ nav a {
   font-weight: bold;
   color: #aaa;
 }
-
+@media (min-width: 320px) and (max-width: 649px) {
+  .fave-wrapper {
+    width: 320px;
+  }
+}
+@media (min-width: 650px) and (max-width: 989px){
+  .fave-wrapper {
+    width: 660px;
+  }
+}
+@media (min-width: 990px) and (max-width: 1319px) {
+  .fave-wrapper {
+    width: 990px;
+  }
+}
+@media (min-width: 1320px) and (max-width: 1649px) {
+  .fave-wrapper {
+    width: 1320px;
+  }
+}
+@media (min-width: 1650px) {
+  .fave-wrapper {
+    width: 1650px;
+  }
+}
 /* Saved Searches */
 
 .saved-wrapper {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  margin: auto;
 }
 .saved-search-card {
   width: 300px;
@@ -569,6 +599,7 @@ nav a {
   background: white;
   padding: 10px;
   position: relative;
+  margin: 5px;
   margin-bottom: 10px;
 }
 .saved-search-head {
@@ -611,25 +642,46 @@ nav a {
   border-radius: 3px;
   height: 30px;
 }
-
+@media (min-width: 320px) and (max-width: 649px) {
+  .saved-wrapper {
+    width: 320px;
+  }
+}
+@media (min-width: 650px) and (max-width: 989px){
+  .saved-wrapper {
+    width: 660px;
+  }
+}
+@media (min-width: 990px) and (max-width: 1319px) {
+  .saved-wrapper {
+    width: 990px;
+  }
+}
+@media (min-width: 1320px) and (max-width: 1649px) {
+  .saved-wrapper {
+    width: 1320px;
+  }
+}
+@media (min-width: 1650px) {
+  .saved-wrapper {
+    width: 1650px;
+  }
+}
 /* Results Page */
 
 .results-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  margin: auto;
 }
-#results-fave {
-  height: 24px;
-}
-#results-fave i {
+.product-results-fave {
+  font-size: 24px;
   color: #aaa;
-}
-.gold {
-  color: gold;
+  height: 24px;
+  margin-top: 10px;
 }
 .results-info {
-  width: 320px;
+  width: 100%;
   background: white;
   margin-bottom: 10px;
 }
@@ -645,7 +697,7 @@ nav a {
   margin-bottom: 10px;
 }
 .category-view img {
-  width: 70%;
+  width: 224px;
   height: 175px;
   margin: auto;
   margin-bottom: 20px;
@@ -673,4 +725,48 @@ nav a {
   width: 100%;
   height: 60px;
   margin-bottom: 10px;
+}
+@media (min-width: 320px) and (max-width: 649px) {
+  .results-wrapper {
+    width: 320px;
+  }
+}
+@media (min-width: 650px) and (max-width: 989px){
+  .results-wrapper {
+    width: 660px;
+  }
+}
+@media (min-width: 990px) and (max-width: 1319px) {
+  .results-wrapper {
+    width: 990px;
+  }
+}
+@media (min-width: 1320px) and (max-width: 1649px) {
+  .results-wrapper {
+    width: 1320px;
+  }
+}
+@media (min-width: 1650px) {
+  .results-wrapper {
+    width: 1650px;
+  }
+}
+@media (min-width: 843px) {
+  .results-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+  .category-view {
+    border-bottom: none;
+
+  }
+  .category-info {
+    width: 60%;
+  }
+  .category-info img {
+    height: 100px;
+    margin-top: 40px;
+  }
 }
