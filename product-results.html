@@ -22,32 +22,32 @@
               <h2 for="result-limit">Limit</h2>
               <h2 id="range-limit-value" class="range-value">500</h2>
             </div>
-            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
+            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="1" max="1000">
           </div>
           <div class="search-input">
             <div>
               <h2>Min Volume</h2>
               <h2 id="range-volume-value" class="range-value">500</h2>
             </div>
-            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
+            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="1" max="1000">
           </div>
           <div class="search-input-1">
             <h2>Price</h2>
             <div>
-              <input type="text" class="search-text" placeholder="Min">
-              <input type="text" class="search-text" placeholder="Max">
+              <input type="text" class="search-text" placeholder="Min" id="price-min">
+              <input type="text" class="search-text" placeholder="Max" id="price-max">
             </div>
           </div>
           <div class="search-input-1">
             <h2>Reviews</h2>
             <div>
-              <input type="text" class="search-text" placeholder="Min">
-              <input type="text" class="search-text" placeholder="Max">
+              <input type="text" class="search-text" placeholder="Min" id="review-min">
+              <input type="text" class="search-text" placeholder="Max" id="review-max">
             </div>
           </div>
           <div class="search-input-2">
             <h2>Sort By</h2>
-            <select class="search-select">
+            <select class="search-select" id="sort-by">
               <option selected>Average Revenue</option>
               <option># Products</option>
               <option>1st Page Space</option>
@@ -59,17 +59,7 @@
           </div>
           <div class="search-input-2">
             <h2>Keywords</h2>
-            <select class="search-select">
-              <option disabled selected>e.g. cooktops or electronics</option>
-              <option>Camping & Outdoors</option>
-              <option>Cleaning Supplies</option>
-              <option>Cooktops</option>
-              <option>Electronics</option>
-              <option>More Options</option>
-              <option>More Options</option>
-              <option>More Options</option>
-              <option>More Options</option>
-            </select>
+            <input type="text" id="keywords">
           </div>
           <div class="save-search">
             <button>Save Search</button>
@@ -110,13 +100,13 @@
         <div class="sort-modal">
           <h2>Sort By</h2>
           <form>
-            <div>Average Revenue <input type="radio" name="sort" value="average-revenue"></div>
-            <div># Products <input type="radio" name="sort" value="num-products"></div>
-            <div>Average Price <input type="radio" name="sort" value="num-products"></div>
-            <div>Average Volume <input type="radio" name="sort" value="num-products"></div>
-            <div>1st Page Space <input type="radio" name="sort" value="num-products"></div>
-            <div>Average Review Count <input type="radio" name="sort" value="num-products"></div>
-            <div>Max Revenue <input type="radio" name="sort" value="num-products"></div>
+            <div><label for="avg-revenue">Average Revenue</label><input type="radio" name="sort" id="avg-revenue"></div>
+            <div><label for="num-products"># Products</label><input type="radio" name="sort" id="num-products"></div>
+            <div><label for="avg-price">Average Price</label><input type="radio" name="sort" id="avg-price"></div>
+            <div><label for="avg-volume">Average Volume</label><input type="radio" name="sort" id="avg-volume"></div>
+            <div><label for="page-space">1st Page Space</label><input type="radio" name="sort" id="page-space"></div>
+            <div><label for="avg-review">Average Review Count</label><input type="radio" name="sort" id="avg-review"></div>
+            <div><label for="max-revenue">Max Revenue</label><input type="radio" name="sort" id="max-revenue"></div>
           </form>
           <div class="sort-buttons">
             <button id="sort-cancel">Cancel</button>

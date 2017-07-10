@@ -22,14 +22,14 @@
               <h2 for="result-limit">Limit</h2>
               <h2 id="range-limit-value" class="range-value">500</h2>
             </div>
-            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="0" max="1000">
+            <input type="range" name="result-limit" class="search-range-slider" id="result-limit" value="500" min="1" max="1000">
           </div>
           <div class="search-input">
             <div>
               <h2>Min Volume</h2>
               <h2 id="range-volume-value" class="range-value">500</h2>
             </div>
-            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="0" max="1000">
+            <input type="range" name="min-volume" class="search-range-slider" id="min-volume" value="500" min="1" max="1000">
           </div>
           <div class="search-input-1">
             <h2>Price</h2>
@@ -47,7 +47,7 @@
           </div>
           <div class="search-input-2">
             <h2>Sort By</h2>
-            <select class="search-select">
+            <select class="search-select" id="sort-by">
               <option selected>Average Revenue</option>
               <option># Products</option>
               <option>1st Page Space</option>
@@ -59,17 +59,7 @@
           </div>
           <div class="search-input-2">
             <h2>Keywords</h2>
-            <select class="search-select">
-              <option disabled selected>e.g. cooktops or electronics</option>
-              <option>Camping & Outdoors</option>
-              <option>Cleaning Supplies</option>
-              <option>Cooktops</option>
-              <option>Electronics</option>
-              <option>More Options</option>
-              <option>More Options</option>
-              <option>More Options</option>
-              <option>More Options</option>
-            </select>
+            <input type="text" id="keywords">
           </div>
           <div class="save-search">
             <button>Save Search</button>
@@ -118,11 +108,11 @@
           </div>
           <div>
             <p>Min Price</p>
-            <p class="mnprc">$35.00</p>
+            <p>$<span class="mnprc">35.00</span></p>
           </div>
           <div>
             <p>Max Price</p>
-            <p class="mxprc">$320.50</p>
+            <p>$<span class="mxprc">320.50</span></p>
           </div>
           <div>
             <p>Min Reviews</p>
@@ -132,7 +122,7 @@
             <p>Max Reviews</p>
             <p class="mxrvw">45</p>
           </div>
-          <div>
+          <div>``
             <p>Sort By</p>
             <p class="srtby">Average Revenue</p>
           </div>
@@ -338,10 +328,10 @@
         </div>
       </div>
       <div class="saved-search-card">
-        <div class="saved-search-head">
+        <header class="saved-search-head">
           <h1>Janitorial Supplies</h1>
           <p>Last Edited: May 2, 2017</p>
-        </div>
+        </header>
         <div class="saved-search-data">
           <div>
             <p>Limit</p>

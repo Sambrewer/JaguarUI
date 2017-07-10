@@ -239,6 +239,15 @@ nav a {
   background: #ddd;
   padding: 5px;
 }
+.search-input-2 input {
+  width: 95%;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
+  background: #ddd;
+  padding: 5px;
+}
 .save-search {
   font-size: 18px;
   font-weight: bold;
@@ -439,6 +448,20 @@ nav a {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 30px;
+}
+.sort-modal input[type=radio] {
+  visibility: hidden;
+  position: absolute;
+}
+.sort-modal i {
+  visibility: hidden;
+  color: dodgerblue;
+}
+.sort-modal input[type=radio]:checked + label {
+  color: dodgerblue;
+}
+.sort-modal input[type=radio]:checked ~ i {
+  visibility: visible;
 }
 .sort-buttons {
   position: absolute;
